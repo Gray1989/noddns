@@ -16,7 +16,7 @@ if(!process.argv[3]) console.log('Command Line Interface (CLI) Usage:\n'
 	+ '  * The IP address being ommitted is the same as specifying it as 0.\n'
 	+ '    This will default to the (public) IP used to make the connection.');
 else { // Implementation:
-	NoDDNS.setUserAgent('ConsoleDDNS', .1, 'your@email.com');
+	NoDDNS.setUserAgent('ConsoleDDNS', 1, 'your@email.com');
 	NoDDNS.updateIP(process.argv[2], process.argv[3], process.argv[4], function(DDNSResponse) {
 		if(DDNSResponse) {
 			switch(DDNSResponse.Code) {
