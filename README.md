@@ -4,7 +4,7 @@ noddns
 NoDDNS No-IP Secure (SSL) Dynamic DNS IP updater for Node.js
 
 Example usage as a command-line interface:
-    ```javascript
+
 	var NoDDNS = require('noddns');
 	if(!process.argv[3]) console.log('Command Line Interface (CLI) Usage:\n'
 		+ '  node dyndns.js username:password host [ipaddress|0] [timeout]\n'
@@ -38,4 +38,3 @@ Example usage as a command-line interface:
 			else console.log("Connection error");
 			}, process.argv[5]);
 		}
-    ```
