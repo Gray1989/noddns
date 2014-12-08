@@ -39,7 +39,7 @@ exports.updateIP = function(credentials, hostname, newip, callback, timeout) {
 			+ (newip?'&myip='+encodeURIComponent(newip):''),
 		method: 'GET',
 		auth: credentials,
-		ca:	ROOT_CA_CERT,
+		ca: ROOT_CA_CERT,
 		headers: {'User-Agent':REPORTED_USERAGENT},
 		agent: false
 		},
