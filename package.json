@@ -1,0 +1,27 @@
+{
+  "name": "noddns",
+  "author": "Jonathan Gray",
+  "description": "NoDDNS No-IP Secure (SSL) Dynamic DNS IP updater",
+  "version": "0.1",
+  "keywords": [
+    "dynamic",
+    "dns",
+    "ddns",
+    "noip",
+    "no-ip",
+    "secure",
+    "ssl"
+  ],
+  "licenses": [
+    {
+      "name": "GPL-2.0",
+      "url": "http://www.gnu.org/licenses/gpl-2.0.html"
+    }
+  ],
+  "homepage": "http://github.com/Gray1989/noddns",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/Gray1989/noddns.git"
+  }
+}
