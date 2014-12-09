@@ -1,6 +1,6 @@
 // NoDDNS No-IP Secure (SSL) Dynamic DNS IP updater module by Jonathan Gray
 var https = require('https'),
-	REPORTED_USERAGENT = 'NoDDNS/1.0.0 noddns@email', // [name/version email@domain] - Required by no-ip
+	REPORTED_USERAGENT = 'NoDDNS/1.1.0 noddns@email', // [name/version email@domain] - Required by no-ip
 	DEFAULT_TIMEOUT = 30000, // Value in milliseconds; 30-second default
 	DDNS_SERVER = 'dynupdate.no-ip.com', // Server DDNS update requests are sent to
 	/*	SSL Signing Chain:
@@ -35,8 +35,8 @@ exports.updateIP = function(credentials, hostname, newip, callback, timeout) {
 		hostname: DDNS_SERVER,
 		port: 443,
 		path: '/nic/update?hostname='
-			+ encodeURIComponent(hostname)
-			+ (newip?'&myip='+encodeURIComponent(newip):''),
+			+ encodeURIComponent(hostname) // Added support for online/offline feature in place of IP
+			+ (newip?(newip==='OFFLINE'?'&offline=YES':(newip==='ONLINE'?'&offline=NO':'&myip='+encodeURIComponent(newip))):''),
 		method: 'GET',
 		auth: credentials,
 		ca: ROOT_CA_CERT,
