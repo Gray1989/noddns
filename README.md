@@ -16,30 +16,34 @@ var NoDDNS = require('noddns');
 ```
 
 ##### Usage:
- * ##### NoDDNS.updateIP(credentials, hostname, newip, callback, timeout)
-    Updates IP address with no-ip.com's servers
-    * credentials (string) - Format username:password
-    * hostname (string) - Example host123.ddns.net
-    * newip (string) - [IPAddress]|ONLINE|OFFLINE|[0=Auto/Default]
-    * callback (function) - Returns DDNSResponse (object) asynchronously
-        * DDNSResponse.ResponseCode - HTTP Response Code
-        * DDNSResponse.Code - API Response Code
-        * DDNSResponse.IPAddress - IP Address (if in response)
-    * timeout (integer) - Max timeout in milliseconds (1/1000th of a second)
- * ##### NoDDNS.setUserAgent(appName, appVersion, appEmail)
-    Used to change the user agent for API communications (important)
-    * appName (string) - Name of your app (no spaces)
-    * appVersion (string/numeric) - Your app version
-    * appEmail (string) - Email address of app or app maintainer
- * ##### NoDDNS.setServer(newDDNSServer)
-    Used to change the server which the IP update request is sent to*
-    * newDDNSServer (string) - Server address
- * ##### NoDDNS.setSSLRootCACertificate(newCACertificate)
-    Used to change the root CA used for verification of server with SSL*
-    * newCACertificate (string) - PEM/Base64-encoded X.509 certificate
- * ##### NoDDNS.setDefaultTimeout(newTimeout)
-    Used to change the default connection timeout*
-    * newTimeout (integer) - New timeout in milliseconds
+##### &nbsp;  NoDDNS.updateIP(credentials, hostname, newip, callback, timeout)
+&nbsp;&nbsp;&nbsp; Updates IP address with no-ip.com's servers
+* credentials (string) - Format username:password
+* hostname (string) - Example host123.ddns.net
+* newip (string) - [IPAddress]|ONLINE|OFFLINE|[0=Auto/Default]
+* callback (function) - Returns DDNSResponse (object) asynchronously
+    * DDNSResponse.ResponseCode - HTTP Response Code
+    * DDNSResponse.Code - API Response Code
+    * DDNSResponse.IPAddress - IP Address (if in response)
+* timeout (integer) - Max timeout in milliseconds (1/1000th of a second)
+
+##### &nbsp;  NoDDNS.setUserAgent(appName, appVersion, appEmail)
+&nbsp;&nbsp;&nbsp; Used to change the user agent for API communications (important)
+* appName (string) - Name of your app (no spaces)
+* appVersion (string/numeric) - Your app version
+* appEmail (string) - Email address of app or app maintainer
+
+##### &nbsp;  NoDDNS.setServer(newDDNSServer)
+&nbsp;&nbsp;&nbsp; Used to change the server which the IP update request is sent to*
+* newDDNSServer (string) - Server address
+
+##### &nbsp;  NoDDNS.setSSLRootCACertificate(newCACertificate)
+&nbsp;&nbsp;&nbsp; Used to change the root CA used for verification of server with SSL*
+* newCACertificate (string) - PEM/Base64-encoded X.509 certificate
+
+##### &nbsp;  NoDDNS.setDefaultTimeout(newTimeout)
+&nbsp;&nbsp;&nbsp; Used to change the default connection timeout*
+* newTimeout (integer) - New timeout in milliseconds
 
 Example usage as a command-line interface:
 
