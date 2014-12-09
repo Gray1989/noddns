@@ -2,7 +2,7 @@
   "name": "noddns",
   "author": "Jonathan Gray",
   "description": "NoDDNS No-IP Secure (SSL) Dynamic DNS IP updater",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "keywords": [
     "dynamic",
     "dns",
