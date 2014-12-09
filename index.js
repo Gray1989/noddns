@@ -36,7 +36,7 @@ exports.updateIP = function(credentials, hostname, newip, callback, timeout) {
 		port: 443,
 		path: '/nic/update?hostname='
 			+ encodeURIComponent(hostname) // Added support for online/offline feature in place of IP
-			+ (newip?(newip==='OFFLINE'?'&offline=YES':(newip==='ONLINE'?'&offline=NO':'&myip='+encodeURIComponent(newip))):''),
+			+ (newip&&newip!=='0'?(newip==='OFFLINE'?'&offline=YES':(newip==='ONLINE'?'&offline=NO':'&myip='+encodeURIComponent(newip))):''),
 		method: 'GET',
 		auth: credentials,
 		ca: ROOT_CA_CERT,
