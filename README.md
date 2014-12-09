@@ -17,7 +17,7 @@ if(!process.argv[3]) console.log('Command Line Interface (CLI) Usage:\n'
     + '    This will default to the (public) IP used to make the connection.\n'
 	+ '  * IP Address can also be specified as ONLINE or OFFLINE');
 else { // Implementation:
-    NoDDNS.setUserAgent('ConsoleDDNS', '1.1.0', 'your@email.com');
+    NoDDNS.setUserAgent('ConsoleDDNS', '1.2.0', 'your@email.com');
     NoDDNS.updateIP(process.argv[2], process.argv[3], process.argv[4], function(DDNSResponse) {
         if(DDNSResponse) {
             switch(DDNSResponse.Code) {
